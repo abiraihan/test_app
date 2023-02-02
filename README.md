@@ -11,6 +11,7 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
     - Install Postgresql with Postgis
       - ```sudo apt install postgis postgresql-15-postgis-3```
       -	Check Path```$ where pg_config```
+    
     *Helpful Links to Install PostgreSQL with POSGIS*
       - https://computingforgeeks.com/how-to-install-postgis-on-debian/
       - https://techviewleo.com/how-to-install-postgresql-server-on-kali-linux/
@@ -23,8 +24,9 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
       - Install PROJ ```sudo apt install proj```
         - Check version ```proj --version```
         -	Check Path ```$ where proj```
-    *Helpful Links to Install POSGIS Dependencies*
-      - https://www.cybertec-postgresql.com/en/postgis-upgrade-geos-with-ubuntu-in-3-steps/
+    
+      *Helpful Links to Install POSGIS Dependencies*
+        - https://www.cybertec-postgresql.com/en/postgis-upgrade-geos-with-ubuntu-in-3-steps/
 
 3.	**Modify *pg_hba.conf* files for postgresql authentication**
     - To find pg_hba.conf for postgresql

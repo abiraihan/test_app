@@ -150,7 +150,7 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
       ```
     - ```$ rails db:migrate```
 
-15.	***POSTGIS* Is Enabled?**
+15.	***POSTGIS* Is Enabled and Functions Properly??**
 
     To check if *POSTGIS* is enabled, open rails console from application root directory
       - ```$ rails console```

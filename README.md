@@ -149,6 +149,24 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
       end
       ```
     - ```$ rails db:migrate```
+    - Your ```/db/schema.rb``` file should look like this
+    
+      ```
+      ActiveRecord::Schema[7.0].define(version: 2023_02_01_205447) do
+        # These are extensions that must be enabled in order to support this database
+        enable_extension "plpgsql"
+        enable_extension "postgis"
+
+        create_table "locations", force: :cascade do |t|
+          t.string "name"
+          t.geometry "geoms", limit: {:srid=>4326, :type=>"geometry"}
+          t.datetime "created_at", null: false
+          t.datetime "updated_at", null: false
+          t.index ["geoms"], name: "index_locations_on_geoms", using: :gist
+        end
+
+      end
+      ```
 
 15.	***POSTGIS* Is Enabled and Functions Properly??**
 

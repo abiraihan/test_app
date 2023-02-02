@@ -1,9 +1,11 @@
 # README
 
-Create New Rails [v7.0.4.2] Application with PostgreSQL-PostGIS database (aarch-arm64):-
+Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS functionality into the database
+  - Valid for below aarch
+    - ```arm64```
 
 0.	To Remove Postgresql from system
-  - https://kb.objectrocket.com/postgresql/how-to-completely-uninstall-postgresql-757
+    - https://kb.objectrocket.com/postgresql/how-to-completely-uninstall-postgresql-757
 
 1.	Install PostgreSQL database.
     - https://computingforgeeks.com/how-to-install-postgis-on-debian/

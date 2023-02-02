@@ -27,20 +27,20 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
     - In pg_hba.conf, change all local previleges to 'trust'/'md5' from 'peer'
     - ```local       all        all         all        trust/md5```
 
-4.	**Create a SUPER USER with same exact database as app-name**
-    - ```$ create role 'app-name' with createdb login password 'password1';```
-    - ```$ ALTER ROLE 'app-name' WITH SUPERUSER;```
+4.	**Create a SUPER USER with same exact app-name into the database**
+    - ```$ create role app-name with createdb login password 'password1';```
+    - ```$ ALTER ROLE app-name WITH SUPERUSER;```
 
 6.	**Restart Posrgresql**
     - ```$ sudo systemctl restart postgresql```
 
 7.	**Create a New rails application**
-    - ```$ rails new 'app-name' --database=postgresql```
+    - ```$ rails new app-name --database=postgresql```
 
 8.	**Add gem to gemfile**
     - ```gem ‘Activerecord-postgis-adapter’```
 
-9.	**In database.yml file, Change as**
+9.	**In /config/database.yml file, Change as**
     - adapter: *postgis*
     - username: *app-name*
     - Password: *123456*)
@@ -74,6 +74,7 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
     - ```$ rails db:migrate```
 
 13.	**Now Generate Model which will create table as the model name +'s' into the database**
+
       ***for example*** : You should name your model as *Location* which will create a table in database as *locations*
     - ```$ rails generate model ‘model-name’```
     - Add column name

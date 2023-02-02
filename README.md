@@ -75,7 +75,7 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
         end
       end
       ```
-    - ```rails db:migrate```
+    - ```$ rails db:migrate```
 
 12. **To check that *POSTGIS* is enabled**
     - From app root directory

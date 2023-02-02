@@ -13,7 +13,7 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
 
 2.	**Install Postgis with *GEOS, PROJ* functionality**
     - https://www.cybertec-postgresql.com/en/postgis-upgrade-geos-with-ubuntu-in-3-steps/
-    - To find path of each installation: \
+    + To find path of each installation: \
       i.	```$ where geos-config``` \
       ii.	```$ where proj``` \
       iii.	```$ where pg_config```
@@ -76,7 +76,7 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
 
 13.	**Now Generate *Model* which will create table as the model name +'s' into the database**
 
-      ***for example*** : You should name your model as *Location* which will create a table in database as *locations*
+      ***For example*** : You should name your model as *Location* which will create a table in database as *locations*
     - ```$ rails generate model model-name```
     - Add column name from ```/db/migrate``` with latest created model name
     - Add geometry column or other column

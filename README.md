@@ -35,6 +35,8 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
 
 7.	**Create a New rails application**
     - ```$ rails new app-name --database=postgresql```
+    - Create a New Rails application with Bootstrap and Javascript bundling
+      - ```$ rails new app-name -d postgresql -j esbuild --css bootstrap```
 
 8.	**Add gem to gemfile**
     - ```gem ‘Activerecord-postgis-adapter’```

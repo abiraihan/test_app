@@ -86,14 +86,17 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
           - ```CREATE EXTENSION POSTGIS;```
           - Check Version ```SELECT PostGIS_version();```
       - To view any particular 'Table'
-        - ```$ \d+ table```
+        - ```$ \d+ table-name```
       - To exit
         - ```$ \q```
 
 12.	**Then migrate database from root app directory**
     - ```$ rails db:migrate```
 
-13.	**Now Generate *Model* which will create table as the model name +'s' into the database**
+13. **If required to rollback applied migration into database in rails app**
+    -```$ rails db:rollback```
+
+14.	**Now Generate *Model* which will create table as the model name +'s' into the database**
 
       ***For example*** : You should name your model as *Location* which will create a table in database as *locations*
     - ```$ rails generate model model-name```
@@ -114,5 +117,5 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
       end
       ```
 
-14.	Continue ..
+15.	Continue ..
 

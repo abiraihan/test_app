@@ -8,15 +8,23 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
     - https://kb.objectrocket.com/postgresql/how-to-completely-uninstall-postgresql-757
 
 1.	**Install PostgreSQL database**
-    - https://computingforgeeks.com/how-to-install-postgis-on-debian/
-    - https://techviewleo.com/how-to-install-postgresql-server-on-kali-linux/
+    - Install Postgresql with Postgis
+      - ```sudo apt install postgis postgresql-15-postgis-3```
+      -	Check Path```$ where pg_config```
+    *Helpful Links to Install PostgreSQL with POSGIS*
+      - https://computingforgeeks.com/how-to-install-postgis-on-debian/
+      - https://techviewleo.com/how-to-install-postgresql-server-on-kali-linux/
 
 2.	**Install Postgis with *GEOS, PROJ* functionality**
-    - https://www.cybertec-postgresql.com/en/postgis-upgrade-geos-with-ubuntu-in-3-steps/
-    - To find path of each installation: \
-      i.	```$ where geos-config``` \
-      ii.	```$ where proj``` \
-      iii.	```$ where pg_config```
+    - To install dependencies for *postgis* and find path of each installation:
+      - Install GEOS ```sudo apt install cmake clang libgeos-dev```
+        - Check Version ```geos-config -version```
+        -	Check Path ```$ where geos-config```
+      - Install PROJ ```sudo apt install proj```
+        - Check version ```proj --version```
+        -	Check Path ```$ where proj```
+    *Helpful Links to Install POSGIS Dependencies*
+      - https://www.cybertec-postgresql.com/en/postgis-upgrade-geos-with-ubuntu-in-3-steps/
 
 3.	**Modify *pg_hba.conf* files for postgresql authentication**
     - To find pg_hba.conf for postgresql
@@ -71,8 +79,9 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
       - ```$ rails db```
       - ```$ \dt```
       - ```$ SELECT postgis_full_version();```
-      - *If not available then enable extension by*
-        - ```CREATE EXTENSION POSTGIS;```
+        - *If not available then enable extension by*
+          - ```CREATE EXTENSION POSTGIS;```
+          - Check Version ```SELECT PostGIS_version();```
       - To view any particular 'Table'
         - ```$ \d+ table```
       - To exit

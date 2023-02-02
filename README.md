@@ -14,7 +14,7 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL-PostGIS database (aarch-
       iii.	```$ where pg_config```
 3.	Change pg_hba.conf files from: /etc/postgresql/15/main/pg_hba.conf
     - Change all local previleges to 'trust'/'md5' from 'peer'
-    - local      all       all       all       trust/md5
+    - local       all        all         all        trust/md5
 4.	Create a SUPER USER with same exact database as app-name
     - ```$ create role app-name with createdb login password 'password1';```
     - ```$ ALTER ROLE app-name WITH SUPERUSER;```

@@ -22,14 +22,15 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL-PostGIS database: -
 7.	Create a New rails application
   ```rails new app-name --database=postgresql```
 8.	Add gem to gemfile
-  ```gem‘Activerecord-postgis-adapter’```
+  ```gem ‘Activerecord-postgis-adapter’```
 9.	In database.yml file, Change as;
   - adapter: postgis
   - username: (app-name)
   - Password: password (ex: 123456)
 10.	Create Postgresql database
   ```rails db:setup```
-11.	add migration file to enable postgis into postgresql database for your application
+11.	Add migration file to enable postgis into postgresql database for your application
+
   ```rails g migration add_postgis_to_database```
   - Add enable_extension ‘postgis’ into change def
   ```

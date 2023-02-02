@@ -68,13 +68,13 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
 
     - ```$ rails g migration add_postgis_to_database```
     - Add enable_extension ‘postgis’ into change def
-    ```
-    class AddPostgisToDatabase < ActiveRecord::Migration[7.0]
-      def change
-        enable_extension 'postgis'
+      ```
+      class AddPostgisToDatabase < ActiveRecord::Migration[7.0]
+        def change
+          enable_extension 'postgis'
+        end
       end
-    end
-    ```
+      ```
     - ```rails db:migrate```
 
 12. **To check that *POSTGIS* is enabled**

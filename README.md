@@ -94,7 +94,7 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
     - ```$ rails db:migrate```
 
 13. **If required to rollback applied migration into database in rails app**
-    -```$ rails db:rollback```
+    - ```$ rails db:rollback```
 
 14.	**Now Generate *Model* which will create table as the model name +'s' into the database**
 

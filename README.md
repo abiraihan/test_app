@@ -150,5 +150,40 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
       ```
     - ```$ rails db:migrate```
 
-15.	Continue ..
+15.	***POSTGIS* Is Enabled?**
+
+    To check if *POSTGIS* is enabled, open rails console from application root directory
+      - ```$ rails console```
+      - Code Snippet:-
+        ```
+        3.0.0 :002 > geo = Location.new
+        => 
+        #<Location:0x0000005595919b60                                         
+        ...
+
+        3.0.0 :003 > geo.name = "My Location"
+        => "My Location"
+
+        3.0.0 :004 > geo.geoms = "POINT(-122.657654 43.876543)"
+        => "POINT(-122.657654 43.876543)"
+
+        3.0.0 :005 > geo
+        => 
+        #<Location:0x0000005595919b60                                                
+        id: nil,                                                                    
+        name: "My Location",                                                        
+        geoms: #<RGeo::Geos::CAPIPointImpl:0x3908 "POINT (-122.657654 43.876543)">, 
+        created_at: nil,                                                            
+        updated_at: nil>
+                                                              
+        3.0.0 :006 > geo.geoms.factory
+        => #<RGeo::Geos::CAPIFactory:0x1bd50 srid=4326 bufres=1 flags=8> 
+                                                          
+        3.0.0 :008 > geo.save
+          TRANSACTION (0.4ms)  BEGIN
+          Location Create (1.8ms)  INSERT INTO "locations" ("name", "geoms", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "My Location"], ["geoms", "0020000001000010e6c05eaa1700cd85594045f0328f9f44d4"], ["created_at", "2023-02-02 23:21:48.125802"], ["updated_at", "2023-02-02 23:21:48.125802"]]                                                
+          TRANSACTION (4.7ms)  COMMIT                              
+        => true
+        ```
+
 

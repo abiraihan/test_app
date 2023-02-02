@@ -64,7 +64,7 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
       - ```$ rails db```
       - ```$ \dt```
       - ```$ SELECT postgis_full_version();```
-      - *If not available then enable extension*
+      - *If not available then enable extension by*
         - ```CREATE EXTENSION POSTGIS;```
       - To view any particular 'Table'
         - ```$ \d+ table```
@@ -78,7 +78,7 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
 
       ***for example*** : You should name your model as *Location* which will create a table in database as *locations*
     - ```$ rails generate model model-name```
-    - Add column name
+    - Add column name from ```/db/migrate``` with latest created model name
     - Add geometry column or other column
       ```
       class CreateLocations < ActiveRecord::Migration[7.0]

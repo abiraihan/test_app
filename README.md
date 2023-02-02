@@ -20,12 +20,11 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
 
 3.	**Modify pg_hba.conf files for postgresql authentication**
     - To find pg_hba.conf for postgresql
-      - Open PostgreSQL as user postgres
       - ```$ sudo -i -u postgres```
       - ```$ psql -t -P format=unaligned -c 'show hba_file';```
         - ```/etc/postgresql/15/main/pg_hba.conf```
     - In pg_hba.conf, change all local previleges to 'trust'/'md5' from 'peer'
-    - ```local       all        all         all        trust/md5```
+      - ```local       all        all         all        trust/md5```
 
 4.	**Create a SUPER USER with same exact app-name into the database**
     - ```$ create role app-name with createdb login password 'password1';```
@@ -76,7 +75,7 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
 13.	**Now Generate Model which will create table as the model name +'s' into the database**
 
       ***for example*** : You should name your model as *Location* which will create a table in database as *locations*
-    - ```$ rails generate model ‘model-name’```
+    - ```$ rails generate model model-name```
     - Add column name
     - Add geometry column or other column
       ```

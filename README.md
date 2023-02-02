@@ -1,6 +1,6 @@
 # README
 
-Create New Rails [v7.0.4.2] Application with PostgreSQL-PostGIS database: -
+Create New Rails [v7.0.4.2] Application with PostgreSQL-PostGIS database:- \
 0.	To Remove Postgresql from system
   - https://kb.objectrocket.com/postgresql/how-to-completely-uninstall-postgresql-757
 1.	Install PostgreSQL database.
@@ -8,10 +8,10 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL-PostGIS database: -
   - https://techviewleo.com/how-to-install-postgresql-server-on-kali-linux/
 2.	Install Postgis with GEOS, PROJ functionality
   - https://www.cybertec-postgresql.com/en/postgis-upgrade-geos-with-ubuntu-in-3-steps/
-  - For path of each installation:
-    i.	```where geos-config```
-    ii.	```where proj```
-    iii.	```where pg_config```
+  - To find path of each installation: \
+    i.	```where geos-config``` \
+    ii.	```where proj``` \
+    iii.	```where pg_config``` \
 3.	Change pg_hba.conf files from: /etc/postgresql/15/main/pg_hba.conf
   - Change all local previleges to 'trust'/'md5' from 'peer'
 4.	Create a SUPER USER with same exact database as app-name \

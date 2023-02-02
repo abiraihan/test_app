@@ -148,6 +148,7 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
         end
       end
       ```
+    - ```$ rails db:migrate```
 
 15.	Continue ..
 

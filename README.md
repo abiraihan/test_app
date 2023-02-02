@@ -22,7 +22,7 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
     - To find pg_hba.conf for postgresql
       - ```$ sudo -i -u postgres```
       - ```$ psql -t -P format=unaligned -c 'show hba_file';```
-        - ```/etc/postgresql/15/main/pg_hba.conf```
+        - *example:* ```/etc/postgresql/15/main/pg_hba.conf```
     - In pg_hba.conf, change all local previleges to 'trust'/'md5' from 'peer'
       - ```local       all        all         all        trust/md5```
 
@@ -64,6 +64,8 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
       - ```$ rails db```
       - ```$ \dt```
       - ```$ SELECT postgis_full_version();```
+      - *If not available then enable extension*
+        - ```CREATE EXTENSION POSTGIS;```
       - To view any particular 'Table'
         - ```$ \d+ table```
       - To exit

@@ -40,7 +40,7 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL-PostGIS database (aarch-
         enable_extension 'postgis'
       end
     end
-  ```
+    ```
 12. To check that 'postgis' enabled,
     - From app root directory
       - ```$ rails db```

@@ -13,10 +13,10 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL-PostGIS database (aarch-
       ii.	```$ where proj``` \
       iii.	```$ where pg_config```
 3.	Change pg_hba.conf files from: /etc/postgresql/15/main/pg_hba.conf
-    - to find hba_file.conf for postgresql
-    - Open PostgreSQL as user postgres
-    - ```$ sudo -i -u postgres```
-    - ```$ psql -t -P format=unaligned -c 'show hba_file';```
+    - To find hba_file.conf for postgresql
+      - Open PostgreSQL as user postgres
+      - ```$ sudo -i -u postgres```
+      - ```$ psql -t -P format=unaligned -c 'show hba_file';```
     - Change all local previleges to 'trust'/'md5' from 'peer'
     - ```local       all        all         all        trust/md5```
 4.	Create a SUPER USER with same exact database as app-name

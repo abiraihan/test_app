@@ -4,7 +4,7 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
   - Valid for below ditribution
     - Kali Linux - ```arm64-debian```
 
-0.	**To Remove Postgresql from system**
+0.	**To Remove Postgresql from system, If necessary**
     - https://kb.objectrocket.com/postgresql/how-to-completely-uninstall-postgresql-757
 
 1.	**Install PostgreSQL database**

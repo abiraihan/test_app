@@ -20,6 +20,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_01_205447) do
     t.geometry "geoms", limit: {:srid=>4326, :type=>"geometry"}
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["geoms"], name: "index_locations_on_geoms", using: :gist
   end
 
 end

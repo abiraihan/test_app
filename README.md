@@ -42,9 +42,14 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
     - ```gem ‘Activerecord-postgis-adapter’```
 
 9.	**In */config/database.yml* file, Change as**
-    - adapter: *postgis*
-    - username: *app-name*
-    - Password: *123456*)
+    ```
+    default: &default
+      adapter: postgis
+      encoding: unicode
+      username: app_name
+      password: 123456
+      schema_search_path: public
+    ```
 
 10.	**Create Postgresql database: create 2 tables**
     - ```$ rails db:setup```

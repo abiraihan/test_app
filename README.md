@@ -49,7 +49,7 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
       - ```$ psql -t -P format=unaligned -c 'show hba_file';```
         - *example:* ```/etc/postgresql/15/main/pg_hba.conf```
     - In pg_hba.conf, change all local previleges to 'trust'/'md5' from 'peer'
-      - ```local       all        all         all        trust/md5```
+      - ```local             all              all               all              trust/md5```
 
 4.	**Create a *SUPER USER* with same exact *app-name* into the database**
 

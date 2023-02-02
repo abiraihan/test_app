@@ -13,7 +13,7 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
 
 2.	**Install Postgis with *GEOS, PROJ* functionality**
     - https://www.cybertec-postgresql.com/en/postgis-upgrade-geos-with-ubuntu-in-3-steps/
-    + To find path of each installation: \
+    - To find path of each installation: \
       i.	```$ where geos-config``` \
       ii.	```$ where proj``` \
       iii.	```$ where pg_config```

@@ -51,20 +51,20 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
     - In pg_hba.conf, change all local previleges to 'trust'/'md5' from 'peer'
       - ```local             all              all               all              trust/md5```
 
-4.	**Create a *SUPER USER* with same exact *app-name* into the database**
+4.	**Create a *SUPERUSER* with same exact *app-name* into the database**
 
     Rails app database migration (database) require superuser previleges to access PostgreSQL database. Follow below as to create a new superuser for your rails application.
 
     - ```$ create role app-name with createdb login password 'password1';```
     - ```$ ALTER ROLE app-name WITH SUPERUSER;```
 
-6.	**Start/Restart Posrgresql**
+6.	**Start/Restart PosrgreSQL**
 
     After adding/changing role (superuser/user) into PostgreSQL Database, It require to restart, if PostgreSQL is not alreday started/restarted.
 
     - ```$ sudo systemctl restart postgresql```
 
-7.	**Create a New rails application**
+7.	**Create a New Rails Application**
 
     While creating new application in Rails[7.0.4.2], please remember to have the same application name regarding the superuser role you already created into PostgreSQL. If your application name is different than your PostgreSQL Superuser name, you need to modify */config/database.yml* accordingly [See 9].
 
@@ -76,7 +76,7 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
     For postgis to work with your application you need add this below gem into your *Gemfile*
     - ```gem ‘Activerecord-postgis-adapter’```
 
-9.	**In */config/database.yml* file, Change as**
+9.	**Modify */config/database.yml* file in order to connect PostgreSQL database**
 
     After creating the new rails application, you need to provide authentication information to access PostgreSQL database from your rails application. Please also remember, default **adapter** params is **postgresql** which need to change as **postgis**
 
@@ -89,12 +89,12 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
         schema_search_path: public
       ```
 
-10.	**Create Postgresql database: create 2 tables**
+10.	**Create PostgreSQL Database: Create Tables**
 
     To create tables into PostgreSQL database for your application, run below command from your application directory
     - ```$ rails db:setup```
 
-11.	**Add migration file to enable postgis into postgresql database for your application**
+11.	**Add migration file to enable *POSTGIS* into PostgreSQL database for your application**
 
     - ```$ rails g migration add_postgis_to_database```
     - Add enable_extension ‘postgis’ into change def
@@ -107,7 +107,7 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
       ```
     - ```$ rails db:migrate```
 
-12. **To check that *POSTGIS* is enabled**
+12. ***POSTGIS* is enabled for your rails application**
     - From application root directory
       - ```$ rails db```
       - ```$ \dt```
@@ -120,13 +120,13 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
       - To exit
         - ```$ \q```
 
-12.	**Then migrate database from root app directory**
+12.	**Apply migration to your database to enable *POSTGIS* functionality from root app directory**
     - ```$ rails db:migrate```
 
-13. **If required to rollback applied migration from database in rails app**
+13. **If required to rollback applied migration from database in rails application**
     - ```$ rails db:rollback```
 
-14.	**Now Generate *Model* which will create table as the model name +'s' into the database**
+14.	**Now Generate *Model* which will create table into the PostgreSQL database**
 
     Your model create a table into the database where data will be stored. This is the table which you manipulate for your application to store data.
 

@@ -17,7 +17,7 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
         - ```$ sudo systemctl start postgresql```
       - Check Status of *PostgreSQL* service
         - ```$ sudo systemctl status postgresql```
-    - To install Postgresql with Postgis
+    - To install *PostgreSQL* alog with *POSTGIS*
       - ```sudo apt install postgis postgresql-15-postgis-3```
       -	Check Path:  ```$ where pg_config```
     

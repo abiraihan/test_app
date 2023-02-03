@@ -9,7 +9,7 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
 
 1.	**Install PostgreSQL database**
 
-    In Kali Linux (aarch-arm64), *PostgreSQL*  comes as Pre-Installed with teh distribution but if you want to install as different varient then you can follow along as below:
+    In Kali Linux (aarch-arm64), *PostgreSQL*  comes as Pre-Installed with the distribution but if you want to install it as a different varient then you can follow along the way here:
 
     - To check existing *PostgreSQL* Version
       - ```$ sudo apt show postgresql```

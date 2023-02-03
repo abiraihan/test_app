@@ -38,7 +38,8 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
         -	Check Path: ```$ where proj```
     
       *Helpful Links to Install POSGIS Dependencies*
-        - https://www.cybertec-postgresql.com/en/postgis-upgrade-geos-with-ubuntu-in-3-steps/
+      - https://www.cybertec-postgresql.com/en/postgis-upgrade-geos-with-ubuntu-in-3-steps/
+      - https://stackoverflow.com/questions/31170055/activerecord-postgis-adapter-undefined-method-point-for-nilnilclass/31170056#31170056
 
 3.	**Modify *pg_hba.conf* files for PostgreSQL give access to other application**
 

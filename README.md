@@ -38,8 +38,8 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
         -	Check Path: ```$ where proj```
     
       *Helpful Links to Install POSGIS Dependencies*
-      - https://www.cybertec-postgresql.com/en/postgis-upgrade-geos-with-ubuntu-in-3-steps/
-      - https://stackoverflow.com/questions/31170055/activerecord-postgis-adapter-undefined-method-point-for-nilnilclass/31170056#31170056
+      - [GEOS Installation](https://www.cybertec-postgresql.com/en/postgis-upgrade-geos-with-ubuntu-in-3-steps/)
+      - [StackOverflow](https://stackoverflow.com/questions/31170055/activerecord-postgis-adapter-undefined-method-point-for-nilnilclass/31170056#31170056)
 
 3.	**Modify *pg_hba.conf* files for PostgreSQL give access to other application**
 
@@ -194,3 +194,6 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
           TRANSACTION (4.7ms)  COMMIT                              
         => true
         ```
+16. Datasets for your Geo Rails Project
+
+    - AT [GADM](https://gadm.org/download_country.html), Select your country and shapefile will be avaiable to download. 

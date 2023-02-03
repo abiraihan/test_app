@@ -25,7 +25,7 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
       - https://computingforgeeks.com/how-to-install-postgis-on-debian/
       - https://techviewleo.com/how-to-install-postgresql-server-on-kali-linux/
 
-2.	**Install Postgis with *GEOS, PROJ* functionality**
+2.	**Install POSTGIS with *GEOS, PROJ* functionality**
 
     *POSTGIS* require following dependencies to be installed into your local machine in order to function properly.
 

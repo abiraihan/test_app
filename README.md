@@ -4,7 +4,7 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
   - Valid for below ditribution
     - Kali Linux - ```arm64-debian```
 
-0.	**To Remove Postgresql from system, If necessary**
+0.	**To Remove PostgreSQL from system, If necessary**
     - https://kb.objectrocket.com/postgresql/how-to-completely-uninstall-postgresql-757
 
 1.	**Install PostgreSQL database**
@@ -40,7 +40,7 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
       *Helpful Links to Install POSGIS Dependencies*
         - https://www.cybertec-postgresql.com/en/postgis-upgrade-geos-with-ubuntu-in-3-steps/
 
-3.	**Modify *pg_hba.conf* files for postgresql to give access to other application**
+3.	**Modify *pg_hba.conf* files for PostgreSQL give access to other application**
 
     *pg_hba.conf* file required to modify if other application require superuser/user access to the database. In order to provide access to all application, localhost *pg_hba.conf* require to modify. Follow below instruction to make those modification which will provide access to other application as necessary.
 

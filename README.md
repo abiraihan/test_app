@@ -5,7 +5,7 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
     - Kali Linux - ```arm64-debian```
 
 0.	**To Remove PostgreSQL from system, If necessary**
-    - https://kb.objectrocket.com/postgresql/how-to-completely-uninstall-postgresql-757
+    - [Complete remove PostgreSQL](https://kb.objectrocket.com/postgresql/how-to-completely-uninstall-postgresql-757)
 
 1.	**Install PostgreSQL database**
 
@@ -22,8 +22,8 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
       -	Check Path:  ```$ where pg_config```
     
     *Helpful Links to Install PostgreSQL with POSGIS*
-      - https://computingforgeeks.com/how-to-install-postgis-on-debian/
-      - https://techviewleo.com/how-to-install-postgresql-server-on-kali-linux/
+      - [Postgis with PostgreSQL](https://computingforgeeks.com/how-to-install-postgis-on-debian/)
+      - [PostgreSQL on Kali Linux](https://techviewleo.com/how-to-install-postgresql-server-on-kali-linux/)
 
 2.	**Install POSTGIS with *GEOS, PROJ* functionality**
 

@@ -5,7 +5,7 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
     - Kali Linux - ```arm64-debian```
 
 0.	**To Remove PostgreSQL from system, If necessary**
-    - [Complete remove PostgreSQL](https://kb.objectrocket.com/postgresql/how-to-completely-uninstall-postgresql-757)
+    - [Removing PostgreSQL Completely](https://kb.objectrocket.com/postgresql/how-to-completely-uninstall-postgresql-757)
 
 1.	**Install PostgreSQL database**
 
@@ -24,6 +24,18 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
     *Helpful Links to Install PostgreSQL with POSGIS*
       - [Postgis with PostgreSQL](https://computingforgeeks.com/how-to-install-postgis-on-debian/)
       - [PostgreSQL on Kali Linux](https://techviewleo.com/how-to-install-postgresql-server-on-kali-linux/)
+  1.1 Installing *dbeaver* on Kali Linux (arm64) | *dbeaver* is open-source free database client software
+      - Download dbeaver [Linux ARM](https://dbeaver.io/files/dbeaver-ce-latest-linux.gtk.aarch64-nojdk.tar.gz) from dbeaver website
+      - Extract archive file *.tar.gz* file into a directory
+        - ```$ tar -xvzf dbeaver-ce-22.3.3-linux.gtk.aarch64-nojdk.tar.gz```
+        - Change directory to the dbeaver where it extracted, ```$ cd ~/dbeaver```
+        - Provide user mod on the dbeaver executable file
+          - ```$ sudo chmod +x ./dbeaver```
+          - To check that dbeaver is opening ```./beaver```
+        - If you want to add that as alias | Please remember teh relative path
+          - Add alias to '.bash_aliases' or '.zshrc' by opening it in a text editor
+        - Add line as ``` alias dbeaver='~/dbeaver/dbeaver'```
+        - Now open a new terminal and write ```dbeaver```
 
 2.	**Install POSTGIS with *GEOS, PROJ* functionality**
 
@@ -196,4 +208,5 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
         ```
 16. Datasets for your Geo Rails Project
 
-    - AT [GADM](https://gadm.org/download_country.html), Select your country and shapefile will be avaiable to download. 
+  - AT [GADM](https://gadm.org/download_country.html), Select your country and shapefile will be avaiable to download.
+    - 

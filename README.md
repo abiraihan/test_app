@@ -209,7 +209,8 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
           TRANSACTION (4.7ms)  COMMIT                              
         => true
         ```
-16. Datasets for your Geo Rails Project
+16. Download test datasets for your Geo Rails Project
 
   - AT [GADM](https://gadm.org/download_country.html), Select your country and shapefile will be avaiable to download.
+    - For my Project, I download Bangladesh country shapefile which includes administrative boundary shapefile
     - 

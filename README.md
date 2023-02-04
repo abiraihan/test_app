@@ -24,6 +24,7 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
     *Helpful Links to Install PostgreSQL with POSGIS*
       - [Postgis with PostgreSQL](https://computingforgeeks.com/how-to-install-postgis-on-debian/)
       - [PostgreSQL on Kali Linux](https://techviewleo.com/how-to-install-postgresql-server-on-kali-linux/)
+
   1.1 Installing *dbeaver* on Kali Linux (arm64) | *dbeaver* is open-source free database client software
       - Download dbeaver [Linux ARM](https://dbeaver.io/files/dbeaver-ce-latest-linux.gtk.aarch64-nojdk.tar.gz) from dbeaver website
       - Extract archive file *.tar.gz* file into a directory

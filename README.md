@@ -34,10 +34,10 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
           - Change directory to the dbeaver where it extracted, ```$ cd ~/dbeaver```
           - Provide user mod on the dbeaver executable file
             - ```$ sudo chmod +x ./dbeaver```
-            - To check that dbeaver is opening ```./beaver```
+            - To check that dbeaver is opening ```./dbeaver```
         - If you want to add that as alias | Please remember teh relative path
           - Add alias to '.bash_aliases' or '.zshrc' by opening it in a text editor
-          - Add line as ``` alias dbeaver='~/dbeaver/dbeaver'```
+          - Add line as ``` alias dbeaver='./dbeaver/dbeaver'```
           - Now open a new terminal and write ```dbeaver```
 
 2.	**Install POSTGIS with *GEOS, PROJ* functionality**

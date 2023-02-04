@@ -25,18 +25,20 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
       - [Postgis with PostgreSQL](https://computingforgeeks.com/how-to-install-postgis-on-debian/)
       - [PostgreSQL on Kali Linux](https://techviewleo.com/how-to-install-postgresql-server-on-kali-linux/)
 
-  1.1 Installing *dbeaver* on Kali Linux (arm64) | *dbeaver* is open-source free database client software
-      - Download dbeaver [Linux ARM](https://dbeaver.io/files/dbeaver-ce-latest-linux.gtk.aarch64-nojdk.tar.gz) from dbeaver website
-      - Extract archive file *.tar.gz* file into a directory
-        - ```$ tar -xvzf dbeaver-ce-22.3.3-linux.gtk.aarch64-nojdk.tar.gz```
-        - Change directory to the dbeaver where it extracted, ```$ cd ~/dbeaver```
-        - Provide user mod on the dbeaver executable file
-          - ```$ sudo chmod +x ./dbeaver```
-          - To check that dbeaver is opening ```./beaver```
-        - If you want to add that as alias | Please remember teh relative path
-          - Add alias to '.bash_aliases' or '.zshrc' by opening it in a text editor
-        - Add line as ``` alias dbeaver='~/dbeaver/dbeaver'```
-        - Now open a new terminal and write ```dbeaver```
+    1.1 Installing *dbeaver* on Kali Linux (arm64) | *dbeaver* is open-source free database client software
+
+        - Download dbeaver [Linux ARM](https://dbeaver.io/files/dbeaver-ce-latest-linux.gtk.aarch64-nojdk.tar.gz) from dbeaver website
+        
+        - Extract archive file *.tar.gz* file into a directory
+          - ```$ tar -xvzf dbeaver-ce-22.3.3-linux.gtk.aarch64-nojdk.tar.gz```
+          - Change directory to the dbeaver where it extracted, ```$ cd ~/dbeaver```
+          - Provide user mod on the dbeaver executable file
+            - ```$ sudo chmod +x ./dbeaver```
+            - To check that dbeaver is opening ```./beaver```
+          - If you want to add that as alias | Please remember teh relative path
+            - Add alias to '.bash_aliases' or '.zshrc' by opening it in a text editor
+          - Add line as ``` alias dbeaver='~/dbeaver/dbeaver'```
+          - Now open a new terminal and write ```dbeaver```
 
 2.	**Install POSTGIS with *GEOS, PROJ* functionality**
 

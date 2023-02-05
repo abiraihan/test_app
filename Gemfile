@@ -45,6 +45,7 @@ gem "rgeo-proj4"
 gem 'rgeo'
 gem 'ffi-geos'
 gem 'activerecord-postgis-adapter'
+gem 'rgeo-geojson'
 
 # Use Sass to process CSS
 # gem "sassc-rails"

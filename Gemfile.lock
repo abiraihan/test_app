@@ -177,6 +177,8 @@ GEM
     rgeo-activerecord (7.0.1)
       activerecord (>= 5.0)
       rgeo (>= 1.0.0)
+    rgeo-geojson (2.1.1)
+      rgeo (>= 1.0.0)
     rgeo-proj4 (4.0.0)
       rgeo (~> 3.0.0)
     rubyzip (2.3.2)
@@ -234,6 +236,7 @@ DEPENDENCIES
   rails (~> 7.0.4, >= 7.0.4.2)
   redis (~> 4.0)
   rgeo
+  rgeo-geojson
   rgeo-proj4
   selenium-webdriver
   sprockets-rails

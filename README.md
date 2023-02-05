@@ -40,7 +40,7 @@
 
     1.1 Installing *dbeaver* on Kali Linux (arm64) | *dbeaver* is open-source free database client software
 
-      - Download dbeaver [Linux ARM](https://dbeaver.io/files/dbeaver-ce-latest-linux.gtk.aarch64-nojdk.tar.gz) from dbeaver website
+      - Download dbeaver [Linux ARM - Download Link(accessed at: February 3, 2023)](https://dbeaver.io/files/dbeaver-ce-latest-linux.gtk.aarch64-nojdk.tar.gz) from [dbeaver official page](https://dbeaver.io/)
 
         - Extract archive file *.tar.gz* file into a directory
           - ```$ tar -xvzf dbeaver-ce-22.3.3-linux.gtk.aarch64-nojdk.tar.gz```

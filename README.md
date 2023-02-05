@@ -1,5 +1,18 @@
 # README
 
+
+**Rails In a NutShell:-**
+
+**Rails Migration**
+  -  [Rails Migration](https://guides.rubyonrails.org/active_record_migrations.html) Modifies your database or table in your database and */db/schema.rb* contains the latest state of your database/tables information that how its organized.
+    - In short, Rails migration provides functionality to modify your database i.e. tables get modified.
+    - You can think of each migration as being a new 'version' of the database. A schema starts off with nothing in it, and each migration modifies it to add or remove tables, columns, or entries. Active Record knows how to update your schema along this timeline, bringing it from whatever point it is in the history to the latest version. Active Record will also update your db/schema.rb file to match the up-to-date structure of your database.
+
+**Rails Model**
+  - Rails Model provides functionality to create tables in your database.
+
+**Create Geospatial Rails Application From Scratch:-**
+
 Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS functionality into the database
   - Valid for below ditribution
     - Kali Linux - ```arm64-debian```
@@ -217,6 +230,7 @@ Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS funct
 17. Rails In a NutShell:-
 
     - [Rails Migration](https://guides.rubyonrails.org/active_record_migrations.html) Modifies your database or table in your database and */db/schema.rb* contains the latest state of your database/tables information that how its organized.
-      - In short, Rails migration provides functionality to modify your database i.e. tables get modified. You can think of each migration as being a new 'version' of the database. A schema starts off with nothing in it, and each migration modifies it to add or remove tables, columns, or entries. Active Record knows how to update your schema along this timeline, bringing it from whatever point it is in the history to the latest version. Active Record will also update your db/schema.rb file to match the up-to-date structure of your database.
-      ```
-    - Rails Model provides functionality to create tables in your database
+      - In short, Rails migration provides functionality to modify your database i.e. tables get modified.
+      - You can think of each migration as being a new 'version' of the database. A schema starts off with nothing in it, and each migration modifies it to add or remove tables, columns, or entries. Active Record knows how to update your schema along this timeline, bringing it from whatever point it is in the history to the latest version. Active Record will also update your db/schema.rb file to match the up-to-date structure of your database.
+    
+    - Rails Model provides functionality to create tables in your database.

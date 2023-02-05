@@ -1,7 +1,7 @@
 # README
 
 
-**Rails In a NutShell:-**
+<h1 style="text-align: center;">Rails In a NutShell</h1>
 
   **Rails Migration**
   - [Rails Migration](https://guides.rubyonrails.org/active_record_migrations.html) Modifies your database or table in your database and */db/schema.rb* contains the latest state of your database/tables information that how its organized.
@@ -20,7 +20,7 @@
 0.	**To Remove PostgreSQL from system, If necessary**
     - [Removing PostgreSQL Completely](https://kb.objectrocket.com/postgresql/how-to-completely-uninstall-postgresql-757)
 
-1.	**Install PostgreSQL database with POSTGIS EXTENSION **
+1. **Install PostgreSQL database with POSTGIS EXTENSION**
 
     In Kali Linux (aarch-arm64), *PostgreSQL*  comes as Pre-Installed with the distribution but if you want to install it as a different varient then you can follow along the way here:
 
@@ -71,7 +71,7 @@
 
 3.	**Modify *pg_hba.conf* files for PostgreSQL give access to other application**
 
-    *pg_hba.conf* file required to modify if other application require superuser/user access to the database. In order to provide access to all application, localhost *pg_hba.conf* require to modify. Follow below instruction to make those modification which will provide access to other application as necessary.
+    <p>*pg_hba.conf* file required to modify if other application require superuser/user access to the database. In order to provide access to all application, localhost *pg_hba.conf* require to modify. Follow below instruction to make those modification which will provide access to other application as necessary.</p>
 
     - To find pg_hba.conf for postgresql
       - ```$ sudo -i -u postgres```

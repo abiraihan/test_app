@@ -4,7 +4,7 @@
 <h1 style="text-align: center;">Rails In a NutShell</h1>
 
   **Rails Migration**
-  - [Rails Migration](https://guides.rubyonrails.org/active_record_migrations.html) Modifies your database or table in your database and */db/schema.rb* contains the latest state of your database/tables information that how its organized.
+  - [Rails Migration](https://guides.rubyonrails.org/active_record_migrations.html) modifies your database or table in your database and */db/schema.rb* contains the latest state of your database/tables information.
       - In short, Rails migration provides functionality to modify your database i.e. tables get modified.
       - You can think of each migration as being a new 'version' of the database. A schema starts off with nothing in it, and each migration modifies it to add or remove tables, columns, or entries. Active Record knows how to update your schema along this timeline, bringing it from whatever point it is in the history to the latest version. Active Record will also update your db/schema.rb file to match the up-to-date structure of your database.
 

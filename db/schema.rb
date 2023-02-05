@@ -10,9 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_01_204518) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_05_174032) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "postgis"
 
+  create_table "countries", force: :cascade do |t|
+    t.string "name"
+    t.geometry "geom", limit: {:srid=>4326, :type=>"multi_polygon"}
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["geom"], name: "index_countries_on_geom", using: :gist
+    t.index ["name"], name: "index_countries_on_name", unique: true
+  end
+
+  create_table "districts", force: :cascade do |t|
+    t.bigint "country_id", null: false
+    t.string "name"
+    t.string "districts"
+    t.geometry "geom", limit: {:srid=>4326, :type=>"multi_polygon"}
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["country_id"], name: "index_districts_on_country_id"
+    t.index ["geom"], name: "index_districts_on_geom", using: :gist
+  end
+
+  add_foreign_key "districts", "countries"
 end

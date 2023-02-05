@@ -225,6 +225,12 @@
 16. **Download test datasets for your Geo Rails Project**
 
   - AT [GADM](https://gadm.org/download_country.html), Select your country and shapefile will be avaiable to download.
-    - For my Project, I download Bangladesh country shapefile which includes administrative boundary shapefile
+    - For my Project, I download Bangladesh country shapefile which includes administrative boundary shapefile for
+      * Country ***
+      * Division
+      * District ***
+      * Upazilla &
+      * Thana ***
+    *** Used for my geo rails project
 
 17. **Continue..**

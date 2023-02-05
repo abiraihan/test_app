@@ -224,7 +224,7 @@
         ```
 16. **Download test datasets for your Geo Rails Project**
 
-  - AT [GADM](https://gadm.org/download_country.html), Select your country and shapefile will be avaiable to download[accessed on February 3, 2023] .
+  - AT [GADM](https://gadm.org/download_country.html), Select your country and shapefile will be avaiable to downlod [accessed on February 3, 2023].
     - For my Project, I download Bangladesh country shapefile which includes administrative boundary shapefile for
       * Country ***
       * Division

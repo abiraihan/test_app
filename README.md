@@ -11,7 +11,7 @@
   **Rails Model**
   - Rails Model provides functionality to create tables in your database.
 
-<p style="text-align: center;">**Create Geospatial Rails Application From Scratch:-**</p>
+<h1 style="text-align: center;">Create Geospatial Rails Application From Scratch</h1>
 
   Create New Rails [v7.0.4.2] Application with PostgreSQL and enable PostGIS functionality into the database
     - Valid for below ditribution

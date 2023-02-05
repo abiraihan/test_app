@@ -45,7 +45,7 @@
         - Extract archive file *.tar.gz* file into a directory
           - ```$ tar -xvzf dbeaver-ce-22.3.3-linux.gtk.aarch64-nojdk.tar.gz```
           - Change directory to the dbeaver where it extracted, ```$ cd ~/dbeaver```
-          - Provide user mod on the dbeaver executable file
+          - Provide permission on the dbeaver executable file
             - ```$ sudo chmod +x ./dbeaver```
             - To check that dbeaver is opening ```./dbeaver```
         - If you want to add that as alias | Please remember teh relative path

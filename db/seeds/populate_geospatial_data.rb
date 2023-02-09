@@ -24,15 +24,15 @@ if Country.all.count == 0
   connection.execute "drop table countries_ref"
 end
 
-bangladesh_id = Country.all.first.id
-puts "Bangladesh country ID = #{bangladesh_id}"
+# bangladesh_id = Country.all.first.id
+# puts "Bangladesh country ID = #{bangladesh_id}"
 
-dam = Country.all
+# dam = Country.all
 
-dam.each do |record|
-  puts record.id
-  puts record.name
-end
+# dam.each do |record|
+#   puts record.id
+#   puts record.name
+# end
 puts
 
 if District.all.count == 0
@@ -52,3 +52,5 @@ if District.all.count == 0
 
   puts
 end
+
+# se = District.where(District.arel_table[:geom].st_within(Country.find_by(name: 'Khulna').geom)).select(:id, :name, :districts)

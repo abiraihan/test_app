@@ -27,6 +27,12 @@ end
 bangladesh_id = Country.all.first.id
 puts "Bangladesh country ID = #{bangladesh_id}"
 
+dam = Country.all
+
+dam.each do |record|
+  puts record.id
+  puts record.name
+end
 puts
 
 if District.all.count == 0
@@ -38,7 +44,9 @@ if District.all.count == 0
   connection.execute from_districts_shp_sql
   connection.execute <<-SQL
       insert into districts(country_id, name, districts, geom, created_at, updated_at)
-        select #{bangladesh_id}, name, district, geom, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP from districts_ref
+        select countries.id, districts_ref.name, districts_ref.district, districts_ref.geom, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP from districts_ref
+        join countries
+        on districts_ref.name = countries.name
   SQL
   connection.execute "drop table districts_ref"
 

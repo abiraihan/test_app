@@ -17,8 +17,8 @@
 default: &default
   adapter: postgis
   encoding: unicode
-  username: test_app
-  password: 123456
+  username: <%= ENV["DATABASE_NAME"] %>
+  password: <%= ENV["DATABASE_PASSWORD"] %>
   schema_search_path: public
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling

@@ -1,13 +1,13 @@
 module CountriesHelper
-  def get_name(city)
-    city.name
+  def get_name(division)
+    division.name
   end
 
-  def get_centroids(city)
-    city.geom.centroid
+  def get_centroids(division)
+    division.geom.centroid
   end
 
-  def geoms(obj)
-    obj.geom.geometry_type
+  def geoms(division)
+    division.geom.geometry_type
   end
 end

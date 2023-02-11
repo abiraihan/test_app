@@ -1,20 +1,21 @@
 <h1>Division Details</h1>
-<h3><%= button_to 'Go To Article Listing Page', countries_path(@country), method: :get %></h3>
+<h3><%= button_to 'Go To Division Listing Page', countries_path(@country), method: :get %></h3>
 <p><strong>Title: </strong><%= @country.name %></p>
+<p><strong>Number of District: There are <%= @district_size %> district  for <%= @country.name %></strong></p>
+<p><strong>List of Districts: </strong><%= @district %></p>
 <p><strong>geometry: </strong><%= @geometry_type %></p>
 <p><strong>Factory: </strong><%= @country.geom.factory %></p>
 <p><strong>EPSG: </strong><%= @country.geom.srid %></p>
-<p><strong>Area: </strong><%= @country.geom.area %></p>
-<p><strong>Centroid: </strong><%= @country.geom.centroid %></p>
+<p><strong>Area: </strong><%= @country.geom.area*1e4 %> Square Kilometer</p>
 <p><strong>Centroids: </strong><%= @centroids %></p>
 
 <body>
 <div>
-<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=9&size=900x400&center=#{@country.geom.centroid.y},#{@country.geom.centroid.x}&key=AIzaSyAyG2guesThJLTlS8YJmGr2fswoRlW_k6s", alt: "Map" %>
+<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=9&size=900x400&center=#{@centroids.y},#{@centroids.x}&key=AIzaSyAyG2guesThJLTlS8YJmGr2fswoRlW_k6s", alt: "Map" %>
 </div>
 
 <div>
-<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?center=#{@country.geom.centroid.y},#{@country.geom.centroid.x}&zoom=9&scale=1&size=900x400&maptype=satellite&format=png&visual_refresh=true&key=AIzaSyAyG2guesThJLTlS8YJmGr2fswoRlW_k6s", alt: "Map" %>
+<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?center=#{@centroids.y},#{@centroids.x}&zoom=9&scale=1&size=900x400&maptype=satellite&format=png&visual_refresh=true&key=AIzaSyAyG2guesThJLTlS8YJmGr2fswoRlW_k6s", alt: "Map" %>
 </div>
 
 </body>

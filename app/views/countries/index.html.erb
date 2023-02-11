@@ -1,0 +1,17 @@
+<h1>Division Listing Page</h1>
+
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+  </tr>
+</thead>
+<tbody>
+<% @countries.each do |record| %>
+ <tr>
+  <td><%= button_to record.name, country_path(record), method: :get %></td>
+ </tr>
+ <% end %>
+</tbody>
+</table>
+<h2><%= link_to 'Home page', root_path %></h2>

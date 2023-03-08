@@ -6,6 +6,7 @@ class CountriesController < ApplicationController
     @geometry_type = helpers.geoms(@country)
     @district = District.where(country_id: @country.id).select('districts').map { |f| f['districts']}
     @district_size = @district.size
+    @geojson = RGeo::GeoJSON.encode(@country.geom)['coordinates']
   end
 
   def index

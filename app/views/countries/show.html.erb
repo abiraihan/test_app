@@ -1,21 +1,47 @@
-<h1>Division Details</h1>
-<h3><%= button_to 'Go To Division Listing Page', countries_path(@country), method: :get %></h3>
-<p><strong>Title: </strong><%= @country.name %></p>
-<p><strong>Number of District: There are <%= @district_size %> district  for <%= @country.name %></strong></p>
-<p><strong>List of Districts: </strong><%= @district %></p>
-<p><strong>geometry: </strong><%= @geometry_type %></p>
-<p><strong>Factory: </strong><%= @country.geom.factory %></p>
-<p><strong>EPSG: </strong><%= @country.geom.srid %></p>
-<p><strong>Area: </strong><%= @country.geom.area*1e4 %> Square Kilometer</p>
-<p><strong>Centroids: </strong><%= @centroids %></p>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style type="text/css">
+    #map {
+      width: 1200px;
+      height: 800px;
+    }
+  </style>
+  <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+  <script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <title>Document</title>
+</head>
 <body>
-<div>
-<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=9&size=900x400&center=#{@centroids.y},#{@centroids.x}&key=AIzaSyAyG2guesThJLTlS8YJmGr2fswoRlW_k6s", alt: "Map" %>
-</div>
+  <h1>Division Details</h1>
+  <h3><%= button_to 'Go To Division Listing Page', countries_path(@country), method: :get %></h3>
+  <p><strong>Title: </strong><%= @country.name %></p>
+  <p><strong>Number of District: There are <%= @district_size %> district  for <%= @country.name %></strong></p>
+  <p><strong>List of Districts: </strong><%= @district %></p>
+  <p><strong>geometry: </strong><%= @geometry_type %></p>
+  <p><strong>Factory: </strong><%= @country.geom.factory %></p>
+  <p><strong>EPSG: </strong><%= @country.geom.srid %></p>
+  <p><strong>Area: </strong><%= @country.geom.area*1e4 %> Square Kilometer</p>
+  <p><strong>Centroids: </strong><%= @centroids %></p>
+  <div id='map'>
+  </div>
+  <script>
+  var map = L.map('map').setView([<%= @centroids.y %>, <%= @centroids.x %>], 8);
+  var tileLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom:19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    });
+  map.addLayer(tileLayer)
 
-<div>
-<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?center=#{@centroids.y},#{@centroids.x}&zoom=9&scale=1&size=900x400&maptype=satellite&format=png&visual_refresh=true&key=AIzaSyAyG2guesThJLTlS8YJmGr2fswoRlW_k6s", alt: "Map" %>
-</div>
-
-</body>
+  var latlngs = [
+    [17.385044, 78.486671],
+    [16.506174, 80.648015],
+    [17.686816, 83.218482]
+  ];
+  var polygon = L.polygon(latlngs, {color: 'red'});
+  polygon.addTo(map)
+  </script>
+  </body>
+</html>
